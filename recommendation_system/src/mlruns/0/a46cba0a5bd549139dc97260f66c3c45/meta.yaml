@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jingshen/PycharmProjects/recommendation/recommendation_system/src/mlruns/0/a46cba0a5bd549139dc97260f66c3c45/artifacts
+end_time: 1685883684556
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a46cba0a5bd549139dc97260f66c3c45
+run_name: fun-gull-277
+run_uuid: a46cba0a5bd549139dc97260f66c3c45
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685883684526
+status: 3
+tags: []
+user_id: jingshen

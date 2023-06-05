@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jingshen/PycharmProjects/recommendation/recommendation_system/src/mlruns/0/3ab84aa546ea4f1c9c271c5a76f1fbf3/artifacts
+end_time: 1685884476154
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3ab84aa546ea4f1c9c271c5a76f1fbf3
+run_name: fortunate-pig-390
+run_uuid: 3ab84aa546ea4f1c9c271c5a76f1fbf3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685884476123
+status: 3
+tags: []
+user_id: jingshen

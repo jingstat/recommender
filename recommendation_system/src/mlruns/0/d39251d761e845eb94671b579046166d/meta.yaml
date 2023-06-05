@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jingshen/PycharmProjects/recommendation/recommendation_system/src/mlruns/0/d39251d761e845eb94671b579046166d/artifacts
+end_time: 1685885270827
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d39251d761e845eb94671b579046166d
+run_name: polite-yak-754
+run_uuid: d39251d761e845eb94671b579046166d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685885257306
+status: 3
+tags: []
+user_id: jingshen

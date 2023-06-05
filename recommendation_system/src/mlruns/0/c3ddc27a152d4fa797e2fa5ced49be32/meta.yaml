@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jingshen/PycharmProjects/recommendation/recommendation_system/src/mlruns/0/c3ddc27a152d4fa797e2fa5ced49be32/artifacts
+end_time: 1685885243979
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c3ddc27a152d4fa797e2fa5ced49be32
+run_name: gregarious-moose-485
+run_uuid: c3ddc27a152d4fa797e2fa5ced49be32
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685885230630
+status: 3
+tags: []
+user_id: jingshen

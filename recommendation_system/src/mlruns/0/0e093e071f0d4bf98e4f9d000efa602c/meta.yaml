@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jingshen/PycharmProjects/recommendation/recommendation_system/src/mlruns/0/0e093e071f0d4bf98e4f9d000efa602c/artifacts
+end_time: 1685885222869
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0e093e071f0d4bf98e4f9d000efa602c
+run_name: dazzling-moth-114
+run_uuid: 0e093e071f0d4bf98e4f9d000efa602c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685885215137
+status: 3
+tags: []
+user_id: jingshen

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jingshen/PycharmProjects/recommendation/recommendation_system/src/mlruns/0/cc47d9e9c6524812b7dd260ad1da7011/artifacts
+end_time: 1685844208504
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cc47d9e9c6524812b7dd260ad1da7011
+run_name: agreeable-midge-5
+run_uuid: cc47d9e9c6524812b7dd260ad1da7011
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685844208468
+status: 3
+tags: []
+user_id: jingshen

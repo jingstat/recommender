@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/jingshen/PycharmProjects/recommendation/recommendation_system/src/mlruns/0/f6be7ea1c71d40acb37446b4518698fa/artifacts
+end_time: 1685883617643
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f6be7ea1c71d40acb37446b4518698fa
+run_name: treasured-colt-502
+run_uuid: f6be7ea1c71d40acb37446b4518698fa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685883617606
+status: 3
+tags: []
+user_id: jingshen
