@@ -3,6 +3,7 @@ import mlflow
 from sklearn.model_selection import train_test_split, ParameterGrid
 from recommender import Recommender
 from evaluator import Evaluator
+from hyperopt import fmin, tpe, hp, STATUS_OK, Trials
 
 # Assume we have 1000 users and 3000 items.
 n_users, n_items = 1000, 3000
@@ -22,26 +23,34 @@ all_samples = np.concatenate([interactions, np.column_stack([negative_samples, n
 
 # Split data into training and test sets
 train_samples, test_samples = train_test_split(all_samples, test_size=0.2, random_state=42)
-# Define the hyperparameters to test
-param_grid = {'epochs': [5, 10], 'learning_rate': [0.001, 0.01, 0.1]}
 
-# Loop over each combination of hyperparameters
-for params in ParameterGrid(param_grid):
+# Define the objective function that the fmin will minimize
+def objective(params):
     with mlflow.start_run():
         # Fit the recommender with the current hyperparameters
-        recommender.fit(train_samples, epochs=params['epochs'], learning_rate=params['learning_rate'])
+        recommender.fit(train_samples, epochs=int(params['epochs']), learning_rate=params['learning_rate'])
 
         # Calculate the metrics with the evaluator
         evaluator = Evaluator(recommender)
         precision = evaluator.precision_at_k(test_samples)
-        # recall = evaluator.recall_at_k(interactions)
-        # map = evaluator.mean_average_precision(interactions)
-        # ndcg = evaluator.ndcg_at_k(interactions)
-
+        mse = recommender.model.evaluate([test_samples[:,0],test_samples[:,1]],test_samples[:,2])
         # Log the metrics to MLFlow
-        mlflow.log_param("epochs", params['epochs'])
+        mlflow.log_param("epochs", int(params['epochs']))
         mlflow.log_param("learning_rate", params['learning_rate'])
         mlflow.log_metric("precision_at_k", precision)
-        # mlflow.log_metric("recall_at_k", recall)
-        # mlflow.log_metric("mean_average_precision", map)
-        # mlflow.log_metric("ndcg_at_k", ndcg)
+        mlflow.log_metric("mse", mse)
+
+        # We want to maximize precision, so we return a negative value
+        return {'loss': mse, 'status': STATUS_OK}
+
+# Define the hyperparameters to optimize
+param_space = {
+    'learning_rate': hp.uniform('learning_rate', 0.001, 0.1),
+    'epochs': hp.quniform('epochs', 3, 5, 1)
+}
+
+# Run the optimizer
+trials = Trials()
+best = fmin(fn=objective, space=param_space, algo=tpe.suggest, max_evals=2, trials=trials)
+
+print("Best parameters:", best)

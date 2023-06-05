@@ -27,7 +27,7 @@ def main():
     # map_score = evaluator.mean_average_precision(interactions, k=10)
     # ndcg = evaluator.ndcg(interactions, k=10)
     #
-    # print(f"Precision@10: {precision}")
+    print(f"Precision@10: {precision}")
     # print(f"Recall@10: {recall}")
     # print(f"MAP@10: {map_score}")
     # print(f"NDCG@10: {ndcg}")

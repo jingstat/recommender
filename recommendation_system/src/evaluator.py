@@ -14,8 +14,8 @@ class Evaluator:
 
         for user_id in user_ids:
             user_interactions = set(interactions[interactions[:, 0] == user_id, 1])
-            recommended_items = self.recommender.recommend_items_to_user(
-                user_id, user_embeddings, item_embeddings, interactions, k
+            recommended_items = self.recommender.recommend(
+                user_id, user_embeddings, item_embeddings,k
             )
 
             for item_id in recommended_items:
@@ -34,8 +34,8 @@ class Evaluator:
 
         for user_id in user_ids:
             user_interactions = set(interactions[interactions[:, 0] == user_id, 1])
-            recommended_items = self.recommender.recommend_items_to_user(
-                user_id, user_embeddings, item_embeddings, interactions, k
+            recommended_items = self.recommender.recommend(
+                user_id, user_embeddings, item_embeddings, k
             )
 
             for item_id in recommended_items:
